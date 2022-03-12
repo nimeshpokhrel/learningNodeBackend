@@ -4,7 +4,7 @@ const path = require("path");
 const router = express.Router();
 const rootDir = require("../helpers/path");
 
-router.get("/add-product", (request, response, next) => {
+router.get("/add-product", (request, response) => {
   response.sendFile(path.join(rootDir, "views", "add-product.html"));
 });
 

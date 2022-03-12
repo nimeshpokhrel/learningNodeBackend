@@ -8,7 +8,7 @@ const rootDir = require("./helpers/path");
 
 const app = express();
 
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(rootDir, "public")));
 
 app.use("/admin", adminRoutes);
