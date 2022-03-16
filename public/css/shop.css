@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-family: "Mukta", sans-serif;
   font-family: 300;
+  overflow-x: hidden;
 }
 
 main {
