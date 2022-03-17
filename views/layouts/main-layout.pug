@@ -1,21 +1,32 @@
-doctype html
+<!DOCTYPE html>
 html(lang="en")
     head
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible" content="IE=edge")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title #{pageTitle}
-        link(rel="preconnect" href="https://fonts.googleapis.com")
-        link(rel="preconnect" href="https://fonts.gstatic.com", crossorigin)
-        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap")
         link(rel="stylesheet" href="/css/shop.css")
-        block styles 
-    body 
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap")
+        block styles
+    body
         header.main-header
+            img.navbar__logo(src="/img/logo.png")
             nav.main-header__nav
                 ul.main-header__items-list
                     li.main-header__item
-                        a(href="/", class=(path === "/" ? "active": ""))  Shop
+                        a(href="/", class=(path === '/' ? 'active' : '')) Shop
                     li.main-header__item
-                        a(href="/admin/add-product", class=(path === "/admin/add-product" ? "active": ""))  Add Product
+                        a(href="/", class=(path === '' ? 'active' : '')) Category
+                    li.main-header__item
+                        a(href="/", class=(path === '' ? 'active' : '')) Request Book
+                    li.main-header__item
+                        a(href="/admin/add-product", class=(path === '/admin/add-product' ? 'active' : '')) Add Product
+                ul.main-header__user-actions-list
+                    li.main-header__user-actions-item
+                        a(href="/login") Login
+                    text /
+                    li.main-header__user-actions-item
+                        a(href="/signup") SignUp
         block content

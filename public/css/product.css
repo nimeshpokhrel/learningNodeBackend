@@ -29,6 +29,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: stretch;
+  padding-top: 40px;
 }
 
 .card {
@@ -80,4 +81,8 @@
 .btn:active {
   background-color: #00695c;
   color: white;
+}
+
+main {
+  padding-top: 40px;
 }
